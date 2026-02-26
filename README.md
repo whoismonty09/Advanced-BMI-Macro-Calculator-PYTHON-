@@ -1,48 +1,53 @@
-print("BMI and Macro Calculator developed by Monty")
-weight = float(input("Enter weight in kg: "))
-height = float(input("Enter height in cm: "))
-age = int(input("Enter age: "))
-gender = input("Enter gender (male/female): ").lower()
+# 🏋️ Advanced BMI & Macro Calculator (Python)
 
-if gender == "male":
-    bmr = 10 * weight + 6.25 * height - 5 * age + 5
-else:
-    bmr = 10 * weight + 6.25 * height - 5 * age - 161
+## 📌 Project Overview
+This project is an advanced Python based BMI and nutrition calculator that determines Body Mass Index and provides daily calorie and macronutrient recommendations for weight loss weight gain and weight maintenance.
 
-def macros(calories):
-    protein = weight * 1.6
-    carbs = (calories * 0.5) / 4
-    fat = (calories * 0.25) / 9
-    fiber = 30
-    return int(protein), int(carbs), int(fat), fiber
+---
 
-maintain = bmr
-mild_loss = bmr - 250
-loss = bmr - 500
-extreme_loss = bmr - 1000
+## 🚀 Features
+- Calculates BMI and health category
+- Suggests daily calorie intake
+- Provides protein carbs fat and fiber values
+- Supports weight loss gain and maintenance goals
+- Simple command line interface
 
-mild_gain = bmr + 250
-gain = bmr + 500
-fast_gain = bmr + 1000
+---
 
-plans = {
-    "Maintain Weight": maintain,
-    "Mild Weight Loss (0.25 kg/week)": mild_loss,
-    "Weight Loss (0.5 kg/week)": loss,
-    "Extreme Weight Loss (1 kg/week)": extreme_loss,
-    "Mild Weight Gain (0.25 kg/week)": mild_gain,
-    "Weight Gain (0.5 kg/week)": gain,
-    "Fast Weight Gain (1 kg/week)": fast_gain
-}
+## 🛠 Technologies Used
+- Python
 
-print("\n--- Calories and Macros Plan ---\n")
+---
 
-for plan, cal in plans.items():
-    protein, carbs, fat, fiber = macros(cal)
-    print(plan)
-    print("Calories/day:", int(cal))
-    print("Protein (g):", protein)
-    print("Carbs (g):", carbs)
-    print("Fat (g):", fat)
-    print("Fiber (g):", fiber)
-    print()
+## 📚 Concepts Applied
+- User input handling
+- Mathematical calculations
+- Conditional statements
+- Functions and loops
+
+---
+
+## ▶ How to Run
+python calorie_macro_calculator.py
+
+---
+
+## 🎯 Learning Outcomes
+- Learned BMI and calorie calculation formulas
+- Practiced nutrition and health logic
+- Improved problem solving skills
+- Strengthened Python fundamentals
+
+---
+
+## 🔮 Future Enhancements
+- Add GUI interface
+- Save user reports
+- Add activity level selection
+- Provide food recommendations
+- Integrate health APIs
+
+---
+
+## 👨‍💻 Author
+Developed by **Your Name**
